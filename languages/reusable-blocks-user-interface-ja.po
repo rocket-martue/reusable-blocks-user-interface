@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-08-08 00:32+0900\n"
-"PO-Revision-Date: 2021-08-08 00:43+0900\n"
+"PO-Revision-Date: 2021-08-08 01:01+0900\n"
 "X-Generator: Poedit 3.0\n"
 "X-Domain: reusable-blocks-user-interface\n"
 "Last-Translator: \n"
@@ -19,21 +19,24 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "Reusable Blocks User Interface"
-msgstr ""
+msgstr "Reusable Blocks User Interface"
 
 #. Description of the plugin
 msgid ""
 "This plugin adds \"Reusable Blocks\" to the admin menu for easy editing. It "
 "also allows you to easily insert blocks into your posts using a shortcode."
 msgstr ""
+"このプラグインは、「再利用可能なブロック」を管理メニューに追加し、簡単に編集"
+"できるようにします。また、ショートコードを使って簡単にブロックを投稿に挿入す"
+"ることができます。"
 
 #. Author of the plugin
 msgid "Rocket Martue"
-msgstr ""
+msgstr "Rocket Martue"
 
 #. Author URI of the plugin
 msgid "https://web-ya3.com"
-msgstr ""
+msgstr "https://web-ya3.com"
 
 #: reusable-blocks-user-interface.php.php:36
 #: reusable-blocks-user-interface.php.php:37
