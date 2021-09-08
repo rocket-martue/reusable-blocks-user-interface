@@ -47,10 +47,14 @@ add_action(
 add_filter(
 	'manage_posts_columns',
 	function ( $columns ) {
-		$new_columns = array(
-			'shortcode' => esc_html__( 'Shortcode', 'reusable-blocks-user-interface' ),
-		);
-		return array_merge( $columns, $new_columns );
+		global $post_type;
+		if( in_array( $post_type, array( 'wp_block' ) ) ) {
+			$new_columns = array(
+				'shortcode' => esc_html__( 'Shortcode', 'reusable-blocks-user-interface' ),
+			);
+			return array_merge( $columns, $new_columns );
+		}
+		return $columns;
 	}
 );
 
