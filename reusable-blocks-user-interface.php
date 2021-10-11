@@ -18,6 +18,8 @@
  * @license GPL-2.0+
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 define( 'RBUI_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'RBUI_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
