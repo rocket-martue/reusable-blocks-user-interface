@@ -27,15 +27,24 @@ msgstr ""
 msgid "Rocket Martue"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "https://web-ya3.com"
-msgstr ""
-
-#: reusable-blocks-user-interface.php.php:36
-#: reusable-blocks-user-interface.php.php:37
+#: functions/rbui-admin-menu.php:7 functions/rbui-admin-menu.php:8
+#: functions/rbui-shortcode.php:7 functions/rbui-shortcode.php:8
 msgid "Reusable Blocks"
-msgstr ""
+msgstr "再利用ブロック"
 
-#: reusable-blocks-user-interface.php.php:51
+#: functions/rbui-admin-menu.php:24 functions/rbui-shortcode.php:24
 msgid "Shortcode"
-msgstr ""
+msgstr "ショートコード"
+
+#: functions/rbui-widget.php:46
+msgid "Optional widget title"
+msgstr "オプションのウィジェットタイトル"
+
+#: functions/rbui-widget.php:50
+msgid "Select reusable block"
+msgstr "再利用ブロックを選択"
+
+#: functions/rbui-widget.php:60
+msgid "You don’t have any reusable block yet."
+msgstr "再利用ブロックがありません。"
+

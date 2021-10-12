@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-08-08 00:32+0900\n"
-"PO-Revision-Date: 2021-08-08 01:01+0900\n"
+"PO-Revision-Date: 2021-10-12 12:41+0900\n"
 "X-Generator: Poedit 3.0\n"
 "X-Domain: reusable-blocks-user-interface\n"
 "Last-Translator: \n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "Reusable Blocks User Interface"
-msgstr "Reusable Blocks User Interface"
+msgstr ""
 
 #. Description of the plugin
 msgid ""
@@ -32,17 +32,25 @@ msgstr ""
 
 #. Author of the plugin
 msgid "Rocket Martue"
-msgstr "Rocket Martue"
+msgstr ""
 
-#. Author URI of the plugin
-msgid "https://web-ya3.com"
-msgstr "https://web-ya3.com"
-
-#: reusable-blocks-user-interface.php.php:36
-#: reusable-blocks-user-interface.php.php:37
+#: functions/rbui-admin-menu.php:7 functions/rbui-admin-menu.php:8
+#: functions/rbui-shortcode.php:7 functions/rbui-shortcode.php:8
 msgid "Reusable Blocks"
 msgstr "再利用ブロック"
 
-#: reusable-blocks-user-interface.php.php:51
+#: functions/rbui-admin-menu.php:24 functions/rbui-shortcode.php:24
 msgid "Shortcode"
 msgstr "ショートコード"
+
+#: functions/rbui-widget.php:46
+msgid "Optional widget title"
+msgstr "オプションのウィジェットタイトル"
+
+#: functions/rbui-widget.php:50
+msgid "Select reusable block"
+msgstr "再利用ブロックを選択"
+
+#: functions/rbui-widget.php:60
+msgid "You don’t have any reusable block yet."
+msgstr "再利用ブロックがありません。"
