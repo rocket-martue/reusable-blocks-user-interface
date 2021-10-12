@@ -3,7 +3,7 @@
  * Plugin Name: Reusable Blocks User Interface
  * Plugin URI: https://github.com/rocket-martue/reusable-blocks-user-interface
  * Description: This plugin adds "Reusable Blocks" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Tested up to: 5.7
  * Requires at least: 5.6
  * Requires PHP: 5.6
