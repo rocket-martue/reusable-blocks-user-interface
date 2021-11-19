@@ -1,9 +1,20 @@
 <?php
 /**
+ * rbui_get_block function.
+ * 
+ * @param mixed $id The ID of the reusable block.
+ * @return $content The content of the block.
+ */
+function rbui_get_block( $id ) {
+	$content_post = get_post( $id );
+	$content = $content_post->post_content;
+	return $content;
+}
+
+/**
  * Rbui_Widget class.
  * 
  * @extends WP_Widget
- * @package reusable-blocks-user-interface
  */
 class Rbui_Widget extends WP_Widget {
 	function __construct() {
@@ -48,11 +59,11 @@ class Rbui_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php echo esc_attr_e( 'Select reusable block', 'reusable-blocks-user-interface' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php echo esc_attr( 'Select reusable block', 'reusable-blocks-user-interface' ); ?></label>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'block_id' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>">
 			<?php while ( $query_reusable->have_posts() ) : $query_reusable->the_post(); ?>
 				<option value="<?php echo get_the_ID(); ?>" <?php selected( $block_id, get_the_ID() ); ?>>
-					<?php the_title() ?>
+					<?php the_title() ?> - (<?php echo sprintf( esc_html__( 'ID: %s', 'reusable-blocks-user-interface' ), get_the_ID() ); ?>)
 				</option>
 			<?php endwhile; ?>
 			</select>
