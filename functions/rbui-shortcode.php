@@ -3,14 +3,18 @@
  * shortcode.
  *
  * @param array $atts User defined attributes in shortcode tag.
- *
  * @return string
+ * @package reusable-blocks-user-interface
  */
 function rbui_shortcode( $atts ) {
-	extract( shortcode_atts(
-		array(
-			'slug' => '',
-		), $atts ) );
+	extract(
+		shortcode_atts(
+			array(
+				'slug' => '',
+			),
+			$atts,
+		)
+	);
 	ob_start();
 	$args = array(
 		'post_type' => array( 'wp_block' ),
