@@ -1,4 +1,9 @@
 <?php
+/**
+ * admin menu
+ *
+ * @package reusable-blocks-user-interface
+ */
 
 add_action(
 	'admin_menu',
