@@ -3,6 +3,7 @@
  * Rbui_Widget class.
  * 
  * @extends WP_Widget
+ * @package reusable-blocks-user-interface
  */
 class Rbui_Widget extends WP_Widget {
 	function __construct() {
