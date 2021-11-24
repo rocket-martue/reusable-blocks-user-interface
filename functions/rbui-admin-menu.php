@@ -37,10 +37,13 @@ add_filter(
 add_filter(
 	'manage_posts_custom_column',
 	function ( $column_name, $post_id ) {
-		if ( 'shortcode' === $column_name ) {
-			$post = get_post( $post_id );
-			$slug = $post->post_name;
-			echo '<span class="rbui-short-code">[rbui slug=' . esc_html( $slug ) . ']</span>';
+		global $post_type;
+		if( in_array( $post_type, array( 'wp_block' ) ) ) {
+			if ( 'shortcode' === $column_name ) {
+				$post = get_post( $post_id );
+				$slug = $post->post_name;
+				echo '<span class="rbui-short-code">[rbui slug=' . esc_html( $slug ) . ']</span>';
+			}
 		}
 	},
 	10,
