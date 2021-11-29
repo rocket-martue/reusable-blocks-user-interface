@@ -7,13 +7,11 @@
  * @package reusable-blocks-user-interface
  */
 function rbui_shortcode( $atts ) {
-	extract(
-		shortcode_atts(
-			array(
-				'slug' => '',
-			),
-			$atts,
-		)
+	$args = shortcode_atts(
+		array(
+			'slug' => '',
+		),
+		$atts
 	);
 	ob_start();
 	$args = array(
