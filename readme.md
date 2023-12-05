@@ -2,7 +2,7 @@
 
 Requires at least: 5.7
 
-Tested up to: 6.0
+Tested up to: 6.4
 
 Requires PHP: 7.3
 
@@ -10,4 +10,4 @@ License: GPLv2 or later
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin adds "Reusable Blocks" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
+This plugin adds "Synced patterns (Reusable Blocks)" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.

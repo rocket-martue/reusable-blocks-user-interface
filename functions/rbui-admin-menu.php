@@ -9,8 +9,8 @@ add_action(
 	'admin_menu',
 	function () {
 		add_menu_page(
-			__( 'Reusable Blocks', 'reusable-blocks-user-interface' ),
-			__( 'Reusable Blocks', 'reusable-blocks-user-interface' ),
+			__( 'Synced patterns', 'reusable-blocks-user-interface' ),
+			__( 'Synced patterns', 'reusable-blocks-user-interface' ),
 			'edit_posts',
 			'edit.php?post_type=wp_block',
 			'',

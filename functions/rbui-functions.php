@@ -1,7 +1,7 @@
 <?php
 /**
  * the_rubi_content function.
- * @param mixed $slug The slug of the reusable block.
+ * @param mixed $slug The slug of the Synced patterns (Reusable Blocks).
  * @return $content The content of the block.
  */
 function rbui_get( $slug ) {

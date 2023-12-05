@@ -2,7 +2,7 @@
 /**
  * rbui_get_block function.
  * 
- * @param mixed $id The ID of the reusable block.
+ * @param mixed $id The ID of the Synced patterns (Reusable Blocks).
  * @return $content The content of the block.
  */
 function rbui_get_block( $id ) {
@@ -20,7 +20,7 @@ class Rbui_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'rbui-widget',
-			'Reusable block'
+			'Synced patterns'
 		);
 		add_action(
 			'widgets_init',
@@ -59,7 +59,7 @@ class Rbui_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php echo esc_attr( 'Select reusable block', 'reusable-blocks-user-interface' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php echo esc_attr( 'Select Synced patterns (Reusable Blocks)', 'reusable-blocks-user-interface' ); ?></label>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'block_id' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>">
 			<?php while ( $query_reusable->have_posts() ) : $query_reusable->the_post(); ?>
 				<option value="<?php echo get_the_ID(); ?>" <?php selected( $block_id, get_the_ID() ); ?>>
@@ -69,7 +69,7 @@ class Rbui_Widget extends WP_Widget {
 			</select>
 		</p>
 		<?php else : ?>
-			<p><?php esc_html_e( 'You don’t have any reusable block yet.', 'reusable-blocks-user-interface' ); ?></p>
+			<p><?php esc_html_e( 'You don’t have any Synced patterns (Reusable Blocks) yet.', 'reusable-blocks-user-interface' ); ?></p>
 		<?php endif; wp_reset_postdata(); ?>
 
 		<?php
