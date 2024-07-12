@@ -1,6 +1,6 @@
 <?php
 /**
- * admin menu
+ * Admin Menu
  *
  * @package reusable-blocks-user-interface
  */

@@ -1,5 +1,11 @@
 <?php
 /**
+ * Widget
+ *
+ * @package reusable-blocks-user-interface
+ */
+
+/**
  * Class Rbui_Widget
  *
  * Handles the display of reusable blocks in a widget.

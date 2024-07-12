@@ -1,10 +1,15 @@
 <?php
 /**
- * shortcode.
+ * Shortcode
+ *
+ * @package reusable-blocks-user-interface
+ */
+
+/**
+ * Add shortcode.
  *
  * @param array $atts User defined attributes in shortcode tag.
  * @return string
- * @package reusable-blocks-user-interface
  */
 function rbui_shortcode( $atts ) {
 	$args = shortcode_atts(

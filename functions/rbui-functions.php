@@ -1,6 +1,13 @@
 <?php
 /**
- * rbui_get function.
+ * Functions
+ *
+ * @package reusable-blocks-user-interface
+ */
+
+/**
+ * Rbui_get function.
+ *
  * @param string $slug The slug of the reusable block.
  * @return string $content The content of the block.
  */
@@ -22,7 +29,8 @@ function rbui_get( $slug ) {
 }
 
 /**
- * the_rubi_content function.
+ * The_rubi_content function.
+ *
  * @param string $slug The slug of the reusable block.
  */
 function the_rubi_content( $slug ) {
