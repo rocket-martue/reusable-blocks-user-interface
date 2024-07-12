@@ -15,7 +15,7 @@ function rbui_shortcode( $atts ) {
 	);
 	$slug = $args['slug'];
 	ob_start();
-	$args = array(
+	$args  = array(
 		'post_type' => array( 'wp_block' ),
 		'name'      => $slug,
 	);

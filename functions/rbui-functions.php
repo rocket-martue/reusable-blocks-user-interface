@@ -1,15 +1,16 @@
 <?php
 /**
- * the_rubi_content function.
- * @param mixed $slug The slug of the Synced patterns (Reusable Blocks).
- * @return $content The content of the block.
+ * rbui_get function.
+ * @param string $slug The slug of the reusable block.
+ * @return string $content The content of the block.
  */
 function rbui_get( $slug ) {
-	$args = array(
+	$content = '';
+	$args    = array(
 		'post_type' => array( 'wp_block' ),
 		'name'      => $slug,
 	);
-	$query = new WP_Query( $args );
+	$query   = new WP_Query( $args );
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
@@ -19,6 +20,12 @@ function rbui_get( $slug ) {
 	wp_reset_postdata();
 	return $content;
 }
+
+/**
+ * the_rubi_content function.
+ * @param string $slug The slug of the reusable block.
+ */
 function the_rubi_content( $slug ) {
-	echo apply_filters( 'the_content', rbui_get( $slug ) );
+	$content = apply_filters( 'the_content', rbui_get( $slug ) );
+	echo wp_kses_post( $content );
 }

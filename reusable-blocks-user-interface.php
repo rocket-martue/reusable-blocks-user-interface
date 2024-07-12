@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Reusable Blocks User Interface
  * Plugin URI: https://github.com/rocket-martue/reusable-blocks-user-interface
- * Description: This plugin adds "Synced patterns (Reusable Blocks)" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
+ * Description: This plugin adds "Reusable Blocks" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
  * Version: 1.0.5
- * Tested up to: 6.4
+ * Tested up to: 6.6
  * Requires at least: 5.7
  * Requires PHP: 7.3
  * Author: Rocket Martue
@@ -16,29 +16,37 @@
  * @package reusable-blocks-user-interface
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 define( 'RBUI_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'RBUI_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 /**
- * Function : plugin loaded
+ * Load plugin textdomain.
  */
 function rbui_plugins_loaded() {
 	load_plugin_textdomain( 'reusable-blocks-user-interface', false, basename( __DIR__ ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'rbui_plugins_loaded' );
 
-$dir = RBUI_PATH .'/functions/';
-if ( ! file_exists( $dir) ) {
+$dir = RBUI_PATH . '/functions/';
+if ( ! file_exists( $dir ) ) {
 	return;
-} else {
-	opendir( $dir );
-	while( ( $file = readdir() ) !== false ) {
-		if( ! is_dir( $file ) && ( strtolower( substr( $file, -4 ) ) == ".php" ) && ( substr( $file, 0, 1 ) != "_" ) ) {
-			$load_file = $dir.$file;
-			require_once( $load_file );
+}
+
+$dh = opendir( $dir );
+if ( false !== $dh ) {
+	while ( true ) {
+		$file = readdir( $dh );
+		if ( false === $file ) {
+			break;
+		}
+		if ( ( ! is_dir( $file ) ) && ( '.php' === strtolower( substr( $file, -4 ) ) ) && ( '_' !== substr( $file, 0, 1 ) ) ) {
+			$load_file = $dir . $file;
+			include_once $load_file;
 		}
 	}
-	closedir();
+	closedir( $dh );
 }

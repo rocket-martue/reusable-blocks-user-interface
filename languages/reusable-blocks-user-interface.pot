@@ -20,7 +20,7 @@ msgid "Reusable Blocks User Interface"
 msgstr ""
 
 #. Description of the plugin
-msgid "This plugin adds \"Reusable Blocks\" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode."
+msgid "This plugin adds \"Patterns\" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode."
 msgstr ""
 
 #. Author of the plugin
@@ -29,8 +29,8 @@ msgstr ""
 
 #: functions/rbui-admin-menu.php:7 functions/rbui-admin-menu.php:8
 #: functions/rbui-shortcode.php:7 functions/rbui-shortcode.php:8
-msgid "Reusable Blocks"
-msgstr "再利用ブロック"
+msgid "Patterns"
+msgstr "パターン"
 
 #: functions/rbui-admin-menu.php:24 functions/rbui-shortcode.php:24
 msgid "Shortcode"
@@ -42,9 +42,9 @@ msgstr "オプションのウィジェットタイトル"
 
 #: functions/rbui-widget.php:50
 msgid "Select reusable block"
-msgstr "再利用ブロックを選択"
+msgstr "パターンを選択"
 
 #: functions/rbui-widget.php:60
 msgid "You don’t have any reusable block yet."
-msgstr "再利用ブロックがありません。"
+msgstr "パターンがありません。"
 
