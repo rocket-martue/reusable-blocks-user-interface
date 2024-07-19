@@ -34,6 +34,6 @@ function rbui_get( $slug ) {
  * @param string $slug The slug of the reusable block.
  */
 function the_rubi_content( $slug ) {
-	$content = apply_filters( 'the_content', rbui_get( $slug ) );
+	$content = rbui_get( $slug );
 	echo wp_kses_post( $content );
 }
