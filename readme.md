@@ -10,4 +10,4 @@ License: GPLv2 or later
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin adds "Reusable Blocks" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
+This plugin adds "Patterns" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.

@@ -18,7 +18,7 @@ class Rbui_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'rbui-widget',
-			'Reusable block'
+			'Patterns'
 		);
 		add_action(
 			'widgets_init',
@@ -81,7 +81,7 @@ class Rbui_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php esc_html_e( 'Select reusable block', 'reusable-blocks-user-interface' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>"><?php esc_html_e( 'Select Pattern', 'reusable-blocks-user-interface' ); ?></label>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'block_id' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'block_id' ) ); ?>">
 			<?php
 			while ( $query_reusable->have_posts() ) :
@@ -98,7 +98,7 @@ class Rbui_Widget extends WP_Widget {
 			</select>
 		</p>
 		<?php else : ?>
-			<p><?php esc_html_e( 'You don’t have any reusable block yet.', 'reusable-blocks-user-interface' ); ?></p>
+			<p><?php esc_html_e( 'No patterns yet.', 'reusable-blocks-user-interface' ); ?></p>
 			<?php
 		endif;
 		wp_reset_postdata();
