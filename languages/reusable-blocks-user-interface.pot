@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: "
 "Reusable Blocks User "
-"Interface 1.0.6\n"
+"Interface 1.0.7\n"
 "Report-Msgid-Bugs-"
 "To: https://github."
 "com/rocket-martue/"
 "reusable-blocks-user-"
 "interface\n"
 "POT-Creation-Date: "
-"2024-07-19 "
-"13:58+0900\n"
+"2025-07-14 "
+"12:00+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: "
 "Rocket Martue\n"
@@ -31,30 +31,30 @@ msgstr ""
 "X-Generator: Poedit "
 "3.4.4\n"
 
-#: functions/rbui-admin-menu.php:12
-#: functions/rbui-admin-menu.php:13
+#: functions/rbui-admin-menu.php:20
+#: functions/rbui-admin-menu.php:21
 msgid "Patterns"
 msgstr ""
 
-#: functions/rbui-admin-menu.php:29
+#: functions/rbui-admin-menu.php:48
 msgid "Shortcode"
 msgstr ""
 
-#: functions/rbui-widget.php:80
+#: functions/class-rbui-widget.php:80
 msgid ""
 "Optional widget title"
 msgstr ""
 
-#: functions/rbui-widget.php:84
+#: functions/class-rbui-widget.php:84
 msgid "Select Pattern"
 msgstr ""
 
-#: functions/rbui-widget.php:94
+#: functions/class-rbui-widget.php:94
 #, php-format
 msgid "ID: %s"
 msgstr ""
 
-#: functions/rbui-widget.php:101
+#: functions/class-rbui-widget.php:105
 msgid ""
 "No patterns yet."
 msgstr ""
