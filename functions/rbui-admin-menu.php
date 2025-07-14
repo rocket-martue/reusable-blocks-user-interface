@@ -17,13 +17,13 @@ add_action(
 	'admin_menu',
 	function () {
 		add_menu_page(
-			__( 'Patterns', 'reusable-blocks-user-interface' ), // Page title
-			__( 'Patterns', 'reusable-blocks-user-interface' ), // Menu title
-			'edit_posts', // Capability required to access the menu
-			'edit.php?post_type=wp_block', // Menu slug (links to wp_block post type)
-			'', // Function to display the page content (empty because we're linking to existing page)
-			'dashicons-block-default', // Menu icon
-			22 // Menu position
+			__( 'Patterns', 'reusable-blocks-user-interface' ), // Page title.
+			__( 'Patterns', 'reusable-blocks-user-interface' ), // Menu title.
+			'edit_posts', // Capability required to access the menu.
+			'edit.php?post_type=wp_block', // Menu slug (links to wp_block post type).
+			'', // Function to display the page content (empty because we're linking to existing page).
+			'dashicons-block-default', // Menu icon.
+			22 // Menu position.
 		);
 	}
 );
@@ -42,7 +42,7 @@ add_filter(
 	'manage_posts_columns',
 	function ( $columns ) {
 		global $post_type;
-		// Only add the column for wp_block post type
+		// Only add the column for wp_block post type.
 		if ( in_array( $post_type, array( 'wp_block' ), true ) ) {
 			$new_columns = array(
 				'shortcode' => esc_html__( 'Shortcode', 'reusable-blocks-user-interface' ),
@@ -67,12 +67,12 @@ add_filter(
 	'manage_posts_custom_column',
 	function ( $column_name, $post_id ) {
 		global $post_type;
-		// Only process for wp_block post type
+		// Only process for wp_block post type.
 		if ( in_array( $post_type, array( 'wp_block' ), true ) ) {
 			if ( 'shortcode' === $column_name ) {
 				$post = get_post( $post_id );
 				$slug = $post->post_name;
-				// Display the shortcode with proper escaping
+				// Display the shortcode with proper escaping.
 				echo '<span class="rbui-short-code">[rbui slug=' . esc_html( $slug ) . ']</span>';
 			}
 		}
