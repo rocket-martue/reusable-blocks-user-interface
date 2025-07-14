@@ -14,6 +14,13 @@ This plugin adds "Patterns" to the admin menu for easy editing. It also allows y
 
 ## Changelog
 
+### Version 1.0.8
+- **Security & Performance Improvements:**
+  - Replaced automatic file loading with manual require_once statements
+  - Fixed open_basedir restriction errors on shared hosting environments
+  - Improved code predictability and debugging capabilities
+  - Enhanced security by explicitly controlling which files are loaded
+
 ### Version 1.0.7
 - **File Structure Changes:**
   - Renamed `functions/rbui-widget.php` → `functions/class-rbui-widget.php` for better organization
@@ -31,13 +38,21 @@ This plugin adds "Patterns" to the admin menu for easy editing. It also allows y
 
 ### File Loading System
 
-The plugin automatically loads all PHP files from the `functions/` directory. To exclude files from being loaded, prefix the filename with a hyphen (`-`). This is useful for:
+As of version 1.0.8, the plugin uses manual file loading for better security and performance:
 
-- Development files
-- Test files  
-- Backup files
-- Disabled functionality
+```php
+require_once RBUI_PATH . '/functions/rbui-admin-menu.php';
+require_once RBUI_PATH . '/functions/rbui-functions.php'; 
+require_once RBUI_PATH . '/functions/rbui-shortcode.php';
+require_once RBUI_PATH . '/functions/class-rbui-widget.php';
+```
 
-Example:
-- `functions/rbui-admin-menu.php` → Will be loaded
-- `functions/-disabled-feature.php` → Will NOT be loaded
+**Benefits of manual loading:**
+- Better security (only intended files are loaded)
+- No open_basedir restriction issues
+- Improved performance (no directory scanning)
+- Easier debugging and maintenance
+- More predictable behavior
+
+**Adding new functionality files:**
+When adding new PHP files to the `functions/` directory, you must manually add a `require_once` statement to the main plugin file.

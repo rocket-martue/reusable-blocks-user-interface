@@ -4,7 +4,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Reusable Blocks User Interface 1.0.7\n"
+"Project-Id-Version: Reusable Blocks User Interface 1.0.8\n"
 "Report-Msgid-Bugs-To: https://github.com/rocket-martue/reusable-blocks-user-"
 "interface\n"
 "POT-Creation-Date: 2025-07-14 12:00+0900\n"

@@ -3,7 +3,7 @@
  * Plugin Name: Reusable Blocks User Interface
  * Plugin URI: https://github.com/rocket-martue/reusable-blocks-user-interface
  * Description: This plugin adds "Reusable Blocks" to the admin menu for easy editing. It also allows you to easily insert blocks into your posts using a shortcode.
- * Version: 1.0.7
+ * Version: 1.0.8
  * Tested up to: 6.6
  * Requires at least: 5.7
  * Requires PHP: 7.3
@@ -37,32 +37,12 @@ function rbui_plugins_loaded() {
 add_action( 'plugins_loaded', 'rbui_plugins_loaded' );
 
 /**
- * Auto-load all PHP files from the functions directory.
+ * Load plugin functionality modules.
  *
- * This section automatically includes all PHP files from the 'functions'
- * directory to load the plugin's functionality modules.
+ * Manually include each required file for better security and performance.
+ * This approach is more predictable than auto-loading and easier to debug.
  */
-$dir = RBUI_PATH . '/functions/';
-// Check if the functions directory exists.
-if ( ! file_exists( $dir ) ) {
-	return;
-}
-
-// Open the directory handle.
-$dh = opendir( $dir );
-if ( false !== $dh ) {
-	// Read all files in the directory.
-	while ( true ) {
-		$file = readdir( $dh );
-		if ( false === $file ) {
-			break; // No more files to read.
-		}
-		// Include only PHP files that don't start with hyphen (private files).
-		if ( ( ! is_dir( $file ) ) && ( '.php' === strtolower( substr( $file, -4 ) ) ) && ( '-' !== substr( $file, 0, 1 ) ) ) {
-			$load_file = $dir . $file;
-			include_once $load_file;
-		}
-	}
-	// Close the directory handle.
-	closedir( $dh );
-}
+require_once RBUI_PATH . '/functions/rbui-admin-menu.php';
+require_once RBUI_PATH . '/functions/rbui-functions.php';
+require_once RBUI_PATH . '/functions/rbui-shortcode.php';
+require_once RBUI_PATH . '/functions/class-rbui-widget.php';
